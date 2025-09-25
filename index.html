@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="imagen/favicon.ico" type="image/x-icon">
+
+    <title>Tejiendo Sueños by MIKCol</title>
+
+</head>
+<body>
+    <!--BARRA DE NAVEGACION-->
+    <header>
+        <h1 >TEJIENDO SUEÑOS by Mica Colman</h1>
+        <nav class="barradenav">
+            <ul class="menu">
+            
+                <li class="items" > <a href="#login">LOGIN</a></li>
+                <li  class="items" > <a href="#cursos">CURSOS</a></li>
+                <li  class="items" > <a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--INTRO-->
+    <section id="intro">
+        <div class="imagenPrimera">
+            <img src="imagen/android-chrome-512x512.png"  alt="Oveja ">
+             <button id="btnimportante">IMPORTANTE</button>
+        </div>
+       
+
+    <!-- MODAL -->
+        <div id="modalImportante" class="oculto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-contenido">
+            <h2 id="modalTitle">Bienvenida a Tejiendo Sueños</h2>
+            <p>
+                Este curso está pensado para quienes desean descubrir el arte del tejido desde cero,  
+                conectar con su lado creativo y disfrutar de momentos de calma y concentración.  
+                Aprenderemos técnicas básicas, puntos esenciales y secretos para crear piezas únicas con  
+                nuestras propias manos. No necesitás experiencia previa: solo ganas de aprender,  
+                paciencia y muchas ganas de tejer historias con cada puntada.
+            </p>
+            <button id="btnCerrar">Cerrar</button>
+            </div>
+        </div>
+    </section>
+        <script>
+        const btnimportante = document.getElementById('btnimportante');
+        const modal = document.getElementById('modalImportante');
+        const btnCerrar = document.getElementById('btnCerrar');
+
+        btnimportante.addEventListener('click', () => {
+            modal.classList.remove('oculto');
+            });
+
+        btnCerrar.addEventListener('click', () => {
+        modal.classList.add('oculto');
+        });
+        </script>
+<!--formulario de registro-->
+    <section id="login">
+        <h2>LOGIN</h2>
+        <form id="formRegistro">
+            <label for="nombre">NOMBRE: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+
+            <label for="apellido">APELLIDO:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" name="email" placeholder="email" >
+            <label for="telefono">TELEFONO:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico sin 15" required>
+            <button type="submit"> LOGIN </button>
+        </form>
+    </section>
+        <script>
+            const form = document.getElementById('formRegistro');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Evita que se recargue la página
+                alert('¡Gracias por registrarte! 🧶 Te damos la bienvenida a Tejiendo Sueños 💚');
+                form.reset(); // Opcional: limpia los campos después del mensaje
+            });
+        </script>
+
+<section id="cursos">
+        <h2 class="tituloCurso">Cursos disponibles:</h2>
+        <div class="contenedordecursos">
+            <div class="curso">
+                <h3>CROCHET</h3>
+                <img src="imagen/handmade-4681198_640.jpg" class="imgcurso" alt="Ovillo + aguja de crochet">
+                <p class="descripcionCurso">Utilizaremos: aguja crochet, tejer diferentes puntos, lectura de puntos </p>
+                <button id="btncrochet">QUIERO</button>
+            </div>
+        
+            <div class="curso">
+                <h3>2 AGUJAS</h3>
+                <img src="imagen/crocheting-1479217_1280.jpg" class="imgcurso" alt="Ovillo + dos agujas">
+                <p class="descripcionCurso">Utilizaremos: 2 agujas, tejer diferentes puntos, lectura de puntos </p>
+                <button id="btndosagujas">QUIERO</button>
+            </div>
+            <div class="curso">
+                <h3>CIRCULAR</h3>
+                <img src="imagen/knitting-1268932_640.jpg" class="imgcurso" alt="Ovillo + aguja CIRCULAR">
+                <p class="descripcionCurso">Utilizaremos: aguja circular, tejer diferentes puntos, lectura de puntos </p>
+                <button id="btncircular">QUIERO</button>
+            </div>
+        </div>
+        <script>
+    document.getElementById('btncrochet').addEventListener('click', () => {
+        alert('¡Curso Crochet reservado con amor! 🧶');
+    });
+
+    document.getElementById('btndosagujas').addEventListener('click', () => {
+        alert('¡Curso Dos agujas confirmado! 🌿');
+    });
+
+    document.getElementById('btncircular').addEventListener('click', () => {
+        alert('¡Curso Circular listo para vos! ✨');
+    });
+    </script>
+</section>
+
+<section id="contacto">
+    <h2>Contacto:</h2>
+    <p class="escribinos ">Escribinos a:
+        <a href="mailto:tejiendosuenos@gmail.com">tejiendosuenos@gmail.com</a>
+    </p>
+    <p class="llamado">Llamanos o manda al WhatsApp:
+        <a href="tel:543493667788">+54 3493667788</a>
+    </p>
+</section>
+
+<section class="detalle">
+    <details>
+        <summary class="pregunsumary">¿Qué es tejer?</summary>
+
+        <p class="tejer">Tejer es una de las diferentes técnicas que hay para confeccionar, una prenda 
+            un peluche, una carpeta. Para nosotros es mucho más que entrelazar hilos. 
+            Es una forma de expresión, una pausa consciente, una conexión con lo hecho a mano. 
+            Cada puntada guarda paciencia, creatividad y memoria. Ya sea con dos agujas, crochet , tejer nos invita a crear con ritmo, 
+            a transformar materiales simples en piezas únicas que abrigan cuerpo y alma.
+        </p>
+    </details>
+</section>
+
+<section id="comentarios">
+    <h2>Dejanos tu comentario</h2>
+    <form id="formcomentario">
+        <label class="comentariopregu" for="mensaje">¿Qué esperás del taller o qué te gustaría compartir?</label>
+        <textarea name="mensaje" id="mensaje" rows="5" cols="40"></textarea>
+        <button type="submit">Enviar mensaje</button>
+    </form>
+    <div id="mensajeconfirmacion" class="oculto"></div>
+</section>
+
+<script>
+    const formcomentario = document.getElementById('formcomentario');
+    const mensajeconfirmacion = document.getElementById('mensajeconfirmacion');
+
+    formcomentario.addEventListener('submit', function(e) {
+        e.preventDefault();
+        mensajeconfirmacion.textContent = '¡Gracias por tu mensaje! 🧶 Lo leemos con mucho cariño 💚';
+        mensajeconfirmacion.classList.remove('oculto');
+        mensajeconfirmacion.classList.add('visible');
+        formcomentario.reset();
+
+        setTimeout(() => {
+        mensajeconfirmacion.classList.remove('visible');
+        mensajeconfirmacion.classList.add('oculto');
+        }, 4000);
+    });
+</script>
+<footer>
+    <p class="footer">© 2025 Tejiendo Sueños · Diseñado con amor por Micaela Colman 🐑</p>
+    <p class="footer"> Seguinos en redes:  
+    <a href="https://www.instagram.com/mickacolman" target="_blank">Instagram</a> ·  
+    </p>
+
+</footer>
+
+</body>
+</html>
