@@ -1,13 +1,13 @@
 html{
     scroll-behavior: smooth;
-} /* Reset básico */
+} 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-    /* Tipografía general */
 body {
     font-family: 'Quicksand', sans-serif;
     background-color:#F3E8FF;
@@ -15,8 +15,28 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
+@media(max-width:780px){
+    body{
+        padding: 10px;
+    }
+    header h1{
+        font-size: 1,8em;
+        text-align: center;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #btnimportante{
+        font-size: 0,9rem;
+        padding: 0,5em 1em;
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+    }
+}
 
-    /* Encabezado */
 header {
     background-color: #cce3dc;
     padding: 1em;
@@ -29,9 +49,10 @@ header h1 {
     font-size: 2.5em;
     color: #2c3e50;
     text-align: left;
-   
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .barradenav{
         background-color: #cce3dc;
         padding: 1em;
@@ -39,15 +60,11 @@ header h1 {
         margin-bottom: 20px;
 }
 
-    /* Secciones */
-
-
 h2 {
     color: #3c763d;
     margin-bottom: 10px;
 }
 
-    /* Botones */
 button {
     background-color: #88c9bf;
     color: white;
@@ -62,7 +79,7 @@ button:hover {
     background-color: #6bb3a7;
 }
 
-    /* Formularios */
+
 form {
     display: flex;
     flex-direction: column;
@@ -78,7 +95,7 @@ input, textarea {
     font-size: 1em;
 }
 
-   /* Cartelitos suaves */
+
 
 #mensajeconfirmacion {
     position: fixed;
@@ -140,6 +157,14 @@ footer {
     height: auto;
     display: block;
 }
+
+@media (max-width: 780px){
+    .imagenPrimera{
+        width: 100%;
+        padding: o;
+    }
+}
+
 #btnimportante{
     z-index: 10;
     position: absolute;
@@ -208,6 +233,12 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media(max-width:780px){
+    .contenedordecursos{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
