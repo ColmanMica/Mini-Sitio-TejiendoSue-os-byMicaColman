@@ -26,10 +26,9 @@
     <section id="intro">
         <div class="imagenPrimera">
             <img src="imagen/android-chrome-512x512.png"  alt="Oveja ">
-             <button id="btnimportante">IMPORTANTE</button>
+            <button id="btnimportante">IMPORTANTE</button>
         </div>
-       
-
+    
     <!-- MODAL -->
         <div id="modalImportante" class="oculto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <div class="modal-contenido">
@@ -45,6 +44,7 @@
             </div>
         </div>
     </section>
+    
         <script>
         const btnimportante = document.getElementById('btnimportante');
         const modal = document.getElementById('modalImportante');
@@ -73,6 +73,7 @@
             <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico sin 15" required>
             <button type="submit"> LOGIN </button>
         </form>
+        <!--mensaje luego de rellenar el formulario -->
     </section>
         <script>
             const form = document.getElementById('formRegistro');
@@ -107,6 +108,8 @@
                 <button id="btncircular">QUIERO</button>
             </div>
         </div>
+
+        <!--mensaje luego de seleccionar las opciones de los cursos-->
         <script>
     document.getElementById('btncrochet').addEventListener('click', () => {
         alert('¡Curso Crochet reservado con amor! 🧶');
@@ -129,7 +132,7 @@
         <a href="mailto:tejiendosuenos@gmail.com">tejiendosuenos@gmail.com</a>
     </p>
     <p class="llamado">Llamanos o manda al WhatsApp:
-        <a href="tel:543493667788">+54 3493667788</a>
+        <a href="tel:543493521688">+54 3493521688</a>
     </p>
 </section>
 <!--extra-->
@@ -150,13 +153,13 @@
 <section id="comentarios">
     <h2>Dejanos tu comentario</h2>
     <form id="formcomentario">
-        <label class="comentariopregu" for="mensaje">¿Qué esperás del taller o qué te gustaría compartir?</label>
+        <label class="comentariopregu" for="mensaje">¿Qué esperás del taller? ¿ Qué te gustaría compartir?</label>
         <textarea name="mensaje" id="mensaje" rows="5" cols="40"></textarea>
         <button type="submit">Enviar mensaje</button>
     </form>
     <div id="mensajeconfirmacion" class="oculto"></div>
 </section>
-
+<!--mensaje luego de enviar el comentario-->
 <script>
     const formcomentario = document.getElementById('formcomentario');
     const mensajeconfirmacion = document.getElementById('mensajeconfirmacion');
