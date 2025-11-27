@@ -8,10 +8,17 @@ html{
     box-sizing: border-box;
 }
 
-body {
+body.claro {
     font-family: 'Quicksand', sans-serif;
     background-color:#F3E8FF;
     color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+body.oscuro{
+    font-family: 'Quicksand', sans-serif;
+    background-color:#1d1d1d;
+    color: #fdfdfd;
     line-height: 1.6;
     padding: 20px;
 }
@@ -61,6 +68,8 @@ header h1 {
 .menu li a:hover {
     color: #6bb3a7;
 }
+
+
 #intro{
     position: relative;
     margin: 0;
@@ -94,9 +103,65 @@ header h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .oculto {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
+#panelAdmin {
+ width: 90%;              /* que ocupe casi todo el ancho */
+  margin: 20px auto;       /* centrado con espacio arriba/abajo */
+  padding: 20px;           /* espacio interno */
+  background-color: #f9f9f9; /* fondo claro para contraste */
+  border: 2px solid #ccc;  /* borde suave */
+  border-radius: 8px;
+}
+#panelAdmin h2 {
+  text-align: center;
+  font-size: 1.8em;        /* más grande */
+  margin-bottom: 15px;
+  color: #333;
+}
+#panelAdmin table {
+  width: 100%;             /* que ocupe todo el panel */
+  border-collapse: collapse;
+  font-size: 1.1em;        /* texto más grande */
+}
+
+#panelAdmin th,
+#panelAdmin td {
+  padding: 12px 15px;      /* más espacio en cada celda */
+  text-align: center;
+  border: 1px solid #aaa;
+}
+#panelAdmin th {
+  background-color: #e0d4f7; /* un lilita suave */
+  color: #222;
+  font-weight: bold;
+}
+
+/* Filas alternadas para mejor lectura */
+#panelAdmin tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Botones dentro de la tabla */
+#panelAdmin .btn-edit,
+#panelAdmin .btn-delete {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#panelAdmin .btn-edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+#panelAdmin .btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
 
 #modalTitle{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -124,6 +189,7 @@ header h1 {
 
 .visible {
     opacity: 1;
+    transition: opacity 0.5s ease;
     }
 
 #modalImportante{
@@ -238,6 +304,22 @@ form {
     
 }
 
+#formCurso {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.form-contenido {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    }
 
 .escribinos{
     color: #29382a;

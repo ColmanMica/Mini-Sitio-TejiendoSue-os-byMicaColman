@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="shortcut icon" href="imagen/favicon.ico" type="image/x-icon">
 
     <title>Tejiendo Sueños by MIKCol</title>
 
 </head>
-<body>
+<body class="claro">
     <!--BARRA DE NAVEGACION-->
     <header>
         <h1 >TEJIENDO SUEÑOS by Mica Colman</h1>
@@ -21,6 +21,7 @@
                 <li  class="items" > <a href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
+        <button id="btnClaroOscuro"> Modo Claro / Oscuro</button>
     </header>
     <!--INTRO-->
     <section id="intro">
@@ -33,7 +34,7 @@
         <div id="modalImportante" class="oculto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <div class="modal-contenido">
             <h2 id="modalTitle">Bienvenida a Tejiendo Sueños</h2>
-            <p>
+            <p id="prrfimportante">
                 Este curso está pensado para quienes desean descubrir el arte del tejido desde cero,  
                 conectar con su lado creativo y disfrutar de momentos de calma y concentración.  
                 Aprenderemos técnicas básicas, puntos esenciales y secretos para crear piezas únicas con  
@@ -45,45 +46,35 @@
         </div>
     </section>
     
-        <script>
-        const btnimportante = document.getElementById('btnimportante');
-        const modal = document.getElementById('modalImportante');
-        const btnCerrar = document.getElementById('btnCerrar');
-
-        btnimportante.addEventListener('click', () => {
-            modal.classList.remove('oculto');
-            });
-
-        btnCerrar.addEventListener('click', () => {
-        modal.classList.add('oculto');
-        });
-        </script>
+        <!--script primero del modal de info importante-->
 <!--formulario de registro-->
-    <section id="login">
-        <h2>LOGIN</h2>
+    <section id="registro">
+        <h2>REGISTRO</h2>
         <form id="formRegistro">
             <label for="nombre">NOMBRE: </label>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
-
             <label for="apellido">APELLIDO:</label>
             <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
             <label for="email">EMAIL:</label>
-            <input type="email" id="email" name="email" placeholder="email" >
+            <input type="email" id="email" name="email" placeholder="Email" >
+            <label for="contrasenia"> CONTRASEÑA</label>
+            <input type="password" id="contrasenia" name="contrasenia" placeholder="password" required>
             <label for="telefono">TELEFONO:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico sin 15" required>
-            <button type="submit"> LOGIN </button>
+            <button type="submit"> REGISTRATE! </button>
         </form>
-        <!--mensaje luego de rellenar el formulario -->
+        
     </section>
-        <script>
-            const form = document.getElementById('formRegistro');
+    <!--LOGEO-->
 
-            form.addEventListener('submit', function(e) {
-                e.preventDefault(); // Evita que se recargue la página
-                alert('¡Gracias por registrarte! 🧶 Te damos la bienvenida a Tejiendo Sueños 💚');
-                form.reset(); // Opcional: limpia los campos después del mensaje
-            });
-        </script>
+    <section id="login" class="oculto">
+        <h2>LOGIN</h2>
+        <form id="formLogin">
+            <input type="email" id="loginEmail" placeholder=""Email" required>
+            <input type="password" id="loginPass" placeholder="contrasenia" required>
+            <button type="submit">INICIAR SESIÓN</button>
+        </form>
+    </section>
 <!--Cursos-->
 <section id="cursos">
         <h2 class="tituloCurso">Cursos disponibles:</h2>
@@ -110,20 +101,112 @@
         </div>
 
         <!--mensaje luego de seleccionar las opciones de los cursos-->
-        <script>
-    document.getElementById('btncrochet').addEventListener('click', () => {
-        alert('¡Curso Crochet reservado con amor! 🧶');
-    });
-
-    document.getElementById('btndosagujas').addEventListener('click', () => {
-        alert('¡Curso Dos agujas confirmado! 🌿');
-    });
-
-    document.getElementById('btncircular').addEventListener('click', () => {
-        alert('¡Curso Circular listo para vos! ✨');
-    });
-    </script>
 </section>
+
+<!--formulario emergente-->
+<div id="formuEmergCurso" class="oculto">
+    <div class="formContenido">
+        <h2 id="formTitulo">
+            INSCRIÇIÓN AL CURSO </h2>
+        <form id="formuInsc" >
+            <label for="name"> Nombre: </label>
+            <input type="text" id="name" required >
+
+            <label for="apellidoo"> Apellido: </label>
+            <input type="text" id="apellidoo" required >
+
+            <label for="emaill"> Email: </label>
+            <input type="email" id="emaill" required >
+
+            <label for="cursoselec"> Curso Seleccionado: </label>
+            <input type="text" id="cursoselec" readonly >
+
+            <label for="dias"> Días: </label>
+            <select id="dias" required >
+
+            <option value="">Selecciona un día </option>
+            <option value="lunes"> Lunes</option> 
+            <option value="martes"> Martes</option> 
+            <option value="miercoles"> Miércoles</option> 
+            <option value="jueves"> Jueves</option> 
+            <option value="sabado"> Sábado</option> 
+            </select>
+
+            <label for="hora"> Hora: </label>
+            <select id="hora" required >
+
+            <option value="">Selecciona un horario </option>
+            <option value="9:00"> 9:00</option> 
+            <option value="10:30"> 10:30</option> 
+            <option value="14:30"> 14:30</option> 
+            <option value="16:00"> 16:00</option> 
+            <option value="18:00"> 18:00</option> 
+            </select>
+
+            <label for="pago"> Forma de pago: </label>
+            <select id="pago" required >
+            <option value="">Selecciona forma de pago </option>
+            <option value="efectivo"> EFECTIVO</option> 
+            <option value="transferencia"> TRANSFERENCIA </option> 
+            <option value="credito"> CREDITO</option>
+            </select> 
+
+            <button type="submit"> CONFIRMAR INSCRIPCIÓN</button>
+            <button type="button" id="cerrarForm"> CANCELAR </button>
+        </form>
+    </div>
+</div>
+<!--logeo de administrador-->
+<div id="loginAdministrador">
+    <h2>ACCESO ADMINISTRADOR</h2>
+    <form id="formAdministrador">
+        <label for="admiUser">USUARIO</label>
+        <input type="text" id="admiUser" required>
+         <label for="admiPass">CONTRASEÑA</label>
+        <input type="password" id="admiPass" required>
+        <button type="submit"> INGRESAR </button>
+    </form>
+</div>
+
+<!--panel de administrador-->
+<div id="panelAdmin" class="oculto">
+    <h2>Panel de inscripciones:</h2>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>Check</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Curso</th>
+            <th>Día</th>
+            <th>Horario</th>
+            <th>Estado</th>
+            <th>Forma de pago</th>
+            </tr>
+        </thead>
+        <tbody id="tablabody"></tbody>
+    </table>
+</div>
+<!--templete-->
+<template id="rowtemplate">
+    <tr>
+        <td > <input type="checkbox" class="row-check"> </td>
+        <td class="row-nombre"></td>
+        <td class="row-apellido"></td>
+        <td class="row-email"></td>
+        <td class="row-curso"></td>
+        <td class="row-dia"></td>
+        <td class="row-hora"></td>
+        <td class="row-estado"></td>
+        <td class="row-pago"></td>
+        <td>
+            <button class="btn-edit"> Editar </button>
+            <button class="btn-delete"> Eliminar </button>
+        </td>
+    </tr>
+</template>
+
 <!--Contacto-->
 
 <section id="contacto">
@@ -160,23 +243,7 @@
     <div id="mensajeconfirmacion" class="oculto"></div>
 </section>
 <!--mensaje luego de enviar el comentario-->
-<script>
-    const formcomentario = document.getElementById('formcomentario');
-    const mensajeconfirmacion = document.getElementById('mensajeconfirmacion');
 
-    formcomentario.addEventListener('submit', function(e) {
-        e.preventDefault();
-        mensajeconfirmacion.textContent = '¡Gracias por tu mensaje! 🧶 Lo leemos con mucho cariño 💚';
-        mensajeconfirmacion.classList.remove('oculto');
-        mensajeconfirmacion.classList.add('visible');
-        formcomentario.reset();
-
-        setTimeout(() => {
-        mensajeconfirmacion.classList.remove('visible');
-        mensajeconfirmacion.classList.add('oculto');
-        }, 4000);
-    });
-</script>
 <!--pie-->
 <footer>
     <p class="footer">© 2025 Tejiendo Sueños · Diseñado con amor por Micaela Colman 🐑</p>
@@ -185,6 +252,6 @@
     </p>
 
 </footer>
-
+<script src="JS/main.js" ></script>
 </body>
 </html>
